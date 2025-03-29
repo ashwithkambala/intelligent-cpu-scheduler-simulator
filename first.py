@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import matplotlib.pyplot as plt
 
+
 # First Come First Serve (FCFS) Scheduling
 def fcfs_scheduling(processes):
     processes.sort(key=lambda x: x[1])  # Sort by Arrival Time
@@ -18,6 +19,7 @@ def fcfs_scheduling(processes):
         waiting_time[i] = turnaround_time[i] - processes[i][2]
 
     return waiting_time, turnaround_time, completion_time
+
 
 # Shortest Job First (SJF) Scheduling
 def sjf_scheduling(processes):
@@ -64,6 +66,7 @@ def round_robin_scheduling(processes, time_quantum):
 
     return waiting_time, turnaround_time, completion_time
 
+
 # Priority Scheduling
 def priority_scheduling(processes):
     processes.sort(key=lambda x: (x[3], x[1]))  # Sort by Priority, then Arrival Time
@@ -93,6 +96,7 @@ def execute_scheduling():
 
     draw_gantt_chart(processes, ct)
     messagebox.showinfo("Results", f"Avg Waiting Time: {sum(wt)/num_processes}\nAvg Turnaround Time: {sum(tat)/num_processes}")
+
 
 # Gantt Chart Visualization
 def draw_gantt_chart(processes, completion_time):
