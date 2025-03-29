@@ -21,7 +21,7 @@ def fcfs_scheduling(processes):
     return waiting_time, turnaround_time, completion_time
 
 
-# Shortest Job First (SJF) Scheduling
+
 def sjf_scheduling(processes):
     processes.sort(key=lambda x: (x[1], x[2]))  # Sort by Arrival Time, then Burst Time
     n = len(processes)
