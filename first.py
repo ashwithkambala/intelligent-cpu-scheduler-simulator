@@ -3,7 +3,7 @@ from tkinter import ttk, messagebox
 import matplotlib.pyplot as plt
 
 
-# First Come First Serve (FCFS) Scheduling
+
 def fcfs_scheduling(processes):
     processes.sort(key=lambda x: x[1])  # Sort by Arrival Time
     n = len(processes)
