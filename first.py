@@ -133,7 +133,6 @@ tk.Button(root, text="Generate Inputs", command=lambda: generate_input_fields())
 
 arrival_entries, burst_entries, priority_entries, time_quantum_entry = [], [], [], None
 
-# Dynamically Generate Input Fields
 def generate_input_fields():
     global arrival_entries, burst_entries, priority_entries, time_quantum_entry
     for widget in root.winfo_children():
